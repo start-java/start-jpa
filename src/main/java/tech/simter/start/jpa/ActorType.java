@@ -18,7 +18,6 @@ public enum ActorType {
     return value;
   }
 
-
   @Override
   public String toString() {
     return "AT:" + super.toString();
