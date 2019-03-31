@@ -7,7 +7,7 @@
     <provider>${jpa.provider}</provider>
 
     <!-- scanning discovers all entities if not set this: -->
-    <!--<class>tech.simter.start.jpa.Actorr</class>-->
+    <!--<class>tech.simter.start.jpa.Actor</class>-->
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
 
     <properties>
