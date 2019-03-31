@@ -1,4 +1,4 @@
-package com.beginner.jpa;
+package tech.simter.start.jpa;
 
 import com.owlike.genson.Genson;
 import org.junit.After;

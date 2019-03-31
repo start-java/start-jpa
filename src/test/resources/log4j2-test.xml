@@ -9,7 +9,7 @@
     <Root level="error">
       <AppenderRef ref="Console"/>
     </Root>
-    <Logger name="com.beginner" level="TRACE"/>
+    <Logger name="tech.simter.start.jpa" level="TRACE"/>
 
     <!-- hibernate http://www.thoughts-on-java.org/hibernate-logging-guide/-->
 

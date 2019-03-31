@@ -1,4 +1,4 @@
-package com.beginner.jpa.idwithconverter;
+package tech.simter.start.jpa.idwithconverter;
 
 import javax.persistence.Column;
 import javax.persistence.Convert;

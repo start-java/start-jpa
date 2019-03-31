@@ -1,4 +1,4 @@
-package com.beginner.jpa;
+package tech.simter.start.jpa;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;

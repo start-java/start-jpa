@@ -1,4 +1,4 @@
-package com.beginner.jpa;
+package tech.simter.start.jpa;
 
 import org.junit.After;
 import org.junit.Assert;
