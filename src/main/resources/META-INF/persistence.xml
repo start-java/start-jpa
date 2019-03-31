@@ -1,0 +1,64 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+  <persistence-unit name="my-jpa" transaction-type="RESOURCE_LOCAL">
+    <provider>${jpa.provider}</provider>
+
+    <!-- scanning discovers all entities if not set this: -->
+    <!--<class>com.beginner.jpa.Actorr</class>-->
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+    <properties>
+      <!-- jdbc connection -->
+      <property name="javax.persistence.jdbc.driver" value="${jdbc.driver}"/>
+      <property name="javax.persistence.jdbc.url" value="${jdbc.url}"/>
+      <property name="javax.persistence.jdbc.user" value="${jdbc.user}"/>
+      <property name="javax.persistence.jdbc.password" value="${jdbc.password}"/>
+
+      <!-- jap2.1 standard: Standardized schema generation and data loading
+        https://docs.oracle.com/javaee/7/tutorial/persistence-intro005.htm
+        http://www.thoughts-on-java.org/standardized-schema-generation-data-loading-jpa-2-1
+        none|create|drop-and-create|drop, default none
+      -->
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+
+      <!-- metadata|script|metadata-then-script|script-then-metadata, default metadata
+      <property name="javax.persistence.schema-generation.create-source" value="metadata"/> -->
+
+      <!-- metadata|script|metadata-then-script|script-then-metadata, default metadata
+      <property name="javax.persistence.schema-generation.drop-source" value="metadata"/> -->
+
+      <!--<property name="javax.persistence.schema-generation.create-script-source" value="src/test/resources/create.sql"/>-->
+      <!--<property name="javax.persistence.schema-generation.drop-script-source" value="src/test/resources/drop.sql"/>-->
+
+      <!-- none|create|drop-and-create|drop, default none -->
+      <property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create"/>
+      <property name="javax.persistence.schema-generation.scripts.create-target" value="target/create.sql"/>
+      <property name="javax.persistence.schema-generation.scripts.drop-target" value="target/drop.sql"/>
+
+      <!-- 初始化数据 -->
+      <property name="javax.persistence.sql-load-script-source" value="META-INF/sql/data.sql"/>
+
+      <!-- true|false, default false-->
+      <!--<property name="javax.persistence.schema-generation.create-database-schemas" value="false"/>-->
+
+      <!-- ? -->
+      <!--<property name="javax.persistence.schema-generation.connection" value=".."/>-->
+
+
+      <!-- hibernate
+      <property name="hibernate.dialect" value="${hibernate.dialect}"/>
+      <property name="hibernate.show_sql" value="true"/> -->
+      <property name="hibernate.format_sql" value="true"/>
+
+      <!-- eclipseLink https://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging -->
+      <property name="eclipselink.logging.level.sql" value="ALL"/>
+      <property name="eclipselink.logging.parameters" value="true"/>
+
+      <!-- datanucleus -->
+      <!--<property name="datanucleus.schema.autoCreateAll" value="true"/>-->
+    </properties>
+  </persistence-unit>
+</persistence>

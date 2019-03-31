@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
+    <Logger name="com.beginner" level="TRACE"/>
+
+    <!-- hibernate http://www.thoughts-on-java.org/hibernate-logging-guide/-->
+
+    <!-- hibernate -->
+    <logger name="org.hibernate" level="warn"/>
+    <logger name="org.hibernate.Version" level="trace"/>
+    <logger name="org.hibernate.dialect" level="trace"/>
+    <logger name="org.hibernate.internal.SessionImpl" level="trace"/>
+    <logger name="org.hibernate.cfg" level="warn"/>
+    <logger name="org.hibernate.boot" level="warn"/>
+    <logger name="org.hibernate.type" level="warn"/>
+    <logger name="org.hibernate.loader" level="warn"/>
+    <logger name="org.hibernate.persister" level="warn"/>
+    <!-- 事务 -->
+    <logger name="org.hibernate.engine.transaction" level="trace"/>
+    <logger name="org.hibernate.jpa" level="warn"/>
+    <!-- jpa: TRACE-元数据模型 -->
+    <logger name="org.hibernate.jpa.internal.metamodel" level="warn"/>
+    <!-- jpa: DEBUG-persistenceUnit详细信息 -->
+    <logger name="org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation" level="trace"/>
+    <!-- cache: TRACE-jpql缓存 -->
+    <logger name="org.hibernate.engine.query.spi.QueryPlanCache" level="warn"/>
+    <!-- jpql: TRACE-jpql语句 | -->
+    <logger name="org.hibernate.engine.query.spi.HQLQueryPlan" level="trace"/>
+    <!-- jpql: TRACE-jpql命名参数 | -->
+    <logger name="org.hibernate.engine.spi.QueryParameters" level="trace"/>
+    <!-- sql: DEBUG-sql -->
+    <logger name="org.hibernate.SQL" level="trace"/>
+    <!-- sql: TRACE-sql占位参数及类型(org.hibernate.type.descriptor.sql.BasicBinder) -->
+    <logger name="org.hibernate.type.descriptor.sql" level="trace"/>
+    <!-- jpql: DEBUG-converter | -->
+    <logger name="org.hibernate.type.descriptor.converter" level="trace"/>
+    <!-- sql: TRACE-查询结果 | -->
+    <logger name="org.hibernate.type.descriptor.sql.BasicExtractor" level="trace"/>
+    <!-- id: DEBUG-insert后生成的ID值 | -->
+    <logger name="org.hibernate.id.IdentifierGeneratorHelper" level="trace"/>
+
+
+    <Logger name="org.hibernate.pretty" level="trace"/>
+    <Logger name="org.hibernate.tool.hbm2ddl" level="trace"/>
+
+
+    <logger name="org.hibernate.engine.query.spi.HQLQueryPlan" level="trace"/>
+
+
+    <!-- eclipseLink -->
+    <Logger name="org.eclipse" level="debug"/>
+  </Loggers>
+</Configuration>
