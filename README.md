@@ -24,6 +24,7 @@ JPA - Java Persistence API
 
 - 2018-05-15 org.hibernate:hibernate-entitymanager:5.3.0.Final (JPA2.2) [Hibernate](http://hibernate.org/orm)
 - 2017-08-22 org.eclipse.persistence:eclipselink:2.7.0 (JPA2.2) [EclipseLink](http://www.eclipse.org/eclipselink/#jpa)
+- 2017-07-15 org.datanucleus:datanucleus-accessplatform-jpa-rdbms:5.1.0-release (JPA2.2) [DataNucleus](http://datanucleus.org)
 - 2016-01-14 org.hibernate:hibernate-entitymanager:5.0.7.Final (JPA2.1) [Hibernate](http://hibernate.org/orm)
 - 2015-12-22 org.eclipse.persistence:org.eclipse.persistence.jpa:2.6.2 (JPA2.1) [EclipseLink](http://www.eclipse.org/eclipselink/#jpa)
 - 2015-10-11 org.datanucleus:datanucleus-jpa-query:4.0.5 (JPA2.1) [DataNucleus](http://datanucleus.org)
@@ -42,9 +43,7 @@ JPA - Java Persistence API
 - Allow AttributeConverters to support CDI injection
 - updated persistence provider discovery mechanism for Java 9 Modules
 
-> [jcp - Short changelog](https://jcp.org/aboutJava/communityprocess/maintenance/jsr338/ChangeLog-JPA-2.2-MR.txt)  
-[What’s new in JPA 2.2](https://www.thoughts-on-java.org/whats-new-in-jpa-2-2/)  
-[infoQ - JPA 2.2 带来一些备受期待的变更](http://www.infoq.com/cn/articles/JPA-2.2-Brings-Highly-Anticipated-Changes)
+> [jcp - Short changelog](https://jcp.org/aboutJava/communityprocess/maintenance/jsr338/ChangeLog-JPA-2.2-MR.txt)
 
 ## JPA 2.1 main features
 
@@ -67,6 +66,10 @@ JPA - Java Persistence API
 - [JSR 338: Oracle official tutorial](https://docs.oracle.com/javaee/7/tutorial/partpersist.htm)
 
 ## Friendly link 
-- [Wikipedia : Java Persistence API](https://en.wikipedia.org/wiki/Java_Persistence_API)
+
+- [JPA Performance Benchmark (JPAB)](http://www.jpab.org/All/All/All.html)
+- [Wikipedia : Java Persistence API](https://en.wikipedia.org/wiki/Java_Persistence_API) - [CN](https://zh.wikipedia.org/wiki/Java持久化API)
+- [JPA 2.2 Brings Some Highly Anticipated Changes](https://www.infoq.com/articles/JPA-2.2-Brings-Highly-Anticipated-Changes) - [CN](http://www.infoq.com/cn/articles/JPA-2.2-Brings-Highly-Anticipated-Changes)
+- [What’s new in JPA 2.2](https://www.thoughts-on-java.org/whats-new-in-jpa-2-2/)  
 - [Thoughts On Java: JPA 2.1 – 12 features every developer should know](http://www.thoughts-on-java.org/jpa-21-overview)
 - [IBM: Hibernate JPA 对象关系映射之关联关系映射策略](http://www.ibm.com/developerworks/cn/java/j-lo-jparelated)
